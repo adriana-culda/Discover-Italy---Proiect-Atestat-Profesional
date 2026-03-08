@@ -1,0 +1,622 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Dots', cursive;
+    scroll-behavior: smooth;
+    max-width: 100vw;
+}
+
+body {
+    height: 300vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position:fixed;
+    top:0;
+    z-index:4;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 3rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color:#c4c4c4;
+}
+
+.black-rectangle {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+    z-index: 1;
+}
+
+.imagine-header {
+    height: 100vh;
+    width: 100%;
+    background: url("https://dolcevita.no/wp-content/uploads/2016/01/P1080529.jpg.webp") no-repeat fixed 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    transform: translateY(150%);
+    left: 2%
+}
+
+.inner-text h1 {
+    font-family: 'Zen Dots', cursive;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 10px;
+    font-size: 6vh;
+    text-transform: uppercase;
+    color: white;
+}
+
+.inner-text p {
+    font-weight: lighter;
+   text-align: left;
+    font-size: 1rem;
+    color: white;
+    width: 50%;
+}
+
+.myButton, .myButton::after {
+    width: 380px;
+    height: 86px;
+    padding: 0 20px;
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #121212 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #f6e600;
+    outline: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+
+
+ .myButton::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'Book Us';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%,#f6e600 3%, #f6e600 5%, #121212 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #f6e600;
+    clip-path: var(--slice-0);
+  }
+  
+  .myButton:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+}
+
+
+
+
+
+.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.text h2 {
+    font-family: 'Zen Dots', cursive;
+    position: relative;
+    font-weight: bolder;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-size: 6vh;
+    text-align: center;
+    transform: translateY(100%);
+    text-decoration: underline;
+}
+
+.text2 h2 {
+    font-family: 'Zen Dots', cursive;
+    position: relative;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 6vh;
+    text-align: center;
+    transform: translateY(100%);
+}
+
+
+
+
+
+
+
+
+#about {
+    margin-top: 30vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.content-stor {
+    height: 150vh;
+    width: 100%;
+    background: url("https://images.pexels.com/photos/629142/pexels-photo-629142.jpeg") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+.content-stor1 {
+    height: 150vh;
+    width: 100%;
+    background: url("https://www.romania-actualitati.ro/img.php?u=https%3A%2F%2Fwww.romania-actualitati.ro%2Fuploads%2Fmodules%2Fnews%2F0%2F2022%2F9%2F16%2F168602%2F1667249405-8b46d654.jpg&w=960&h=540&c=1") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.stor1 {
+    margin-top: 4rem;
+}
+
+.stor1 h3 {
+    position: relative;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 5vh;
+    text-align: center;
+    transform: translateY(100%);
+    color: white;
+    
+}
+
+.stor1 p {
+    font-weight: 300;
+    display: flex;
+    margin-top: 5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    width: 75%;
+    margin-left: 50vw;
+    transform: translate(-50%, 100%);
+}
+
+.content-stor2 {
+    margin-top: 10vh;
+    height: 90vh;
+    width: 100%;
+    background: url("https://cdn.discordapp.com/attachments/803931372707250196/1048687998901948507/90.png") no-repeat fixed 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.stor2 p {
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    width: 75%;
+    margin-left: 50vw;
+    transform: translate(-50%, 100%);
+    z-index: 3;
+}
+
+.stor2 h3 {
+    margin-top: 1em;
+    position: relative;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 5vh;
+    text-align: center;
+    transform: translateY(100%);
+    color: white;
+    
+}
+
+
+
+
+
+/*orase*/
+
+
+
+
+#orase {
+    margin-top: 30vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.orase1 {
+    margin-top: 4rem;
+}
+
+.orase1 p {
+    font-weight: 300;
+    display: flex;
+    margin-top: 5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    width: 75%;
+    margin-left: 50vw;
+    transform: translate(-50%, 100%);
+}
+
+
+
+
+
+
+.roma{
+    height: 100vh;
+    width: 100%;
+    background: url("https://luizatravel.ro/wp-content/uploads/2014/05/roma33.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.Milano{
+    height: 100vh;
+    width: 100%;
+    background: url("https://www.milanfierehotel.com/wp-content/uploads/sites/402/2022/07/Piazza-Duomo-Milano-Hotel-voco-Milan-Fiere-2200x1200.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.Napoli{
+    height: 100vh;
+    width: 100%;
+    background: url("https://escapismro.files.wordpress.com/2016/02/vedere-procida-italia.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.Torino{
+    height: 100vh;
+    width: 100%;
+    background: url("https://xplorer.ro/wp-content/uploads/2023/04/Obiective-turistice-Torino.webp") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.Palermo{
+    height: 100vh;
+    width: 100%;
+    background: url("https://www.solosophie.com/wp-content/uploads/2023/06/palermo-golden-hour_2226979041.jpeg.webp") no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+
+
+
+
+
+
+.turism1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imgt {
+   width: 400px;
+   height: 300px;
+   border: 2px solid black;
+   border-radius: 13px;
+   box-shadow: 4px 7px 0px white;
+   cursor: pointer;
+   margin: 10px;
+   margin-left: 50px;
+   transition: 400ms;
+}
+
+.imgt:hover {
+    filter: grayscale(1);
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+.gallery {
+    background-color: #1f1f1f;
+    margin-top: 15vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery h2 {
+    font-family: 'Zen Dots', cursive;
+    margin-top: 20vh;
+    position: relative;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-size: 6vh;
+    text-align: center;
+    transform: translateY(150%);
+    text-decoration: underline;
+    color:white;
+    z-index:3;
+}
+
+.carousel {
+    z-index:2;
+}
+
+.carousel-inner img{
+    width: 50%;
+    display: block;
+    margin-top:20vh;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 48vh;
+}
+
+.carousel-control-prev {
+    justify-content: center;
+    margin-bottom: 25vh;
+}
+
+.carousel-control-next {
+    justify-content: center;
+    margin-bottom: 25vh;
+}
+
+
+
+
+
+.black-rectangle2 {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    background-color:#0d0d0d;
+    opacity: 1;
+    z-index: -1;
+}
+
+.carousel-indicators {
+    margin-bottom: 20vh;
+}
+
+.background {
+    background: url("https://www.descopera.ro/wp-content/uploads/2022/04/turn-pisa-italia-shutterstock_descopera745306897-scaled-e1650355549347.jpg")no-repeat fixed 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    transform: translateX(2%);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+}
+
+.contact-text {
+    text-align: left;
+}
+
+.contact-text h2 {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-family: 'Zen Dots', cursive;
+    letter-spacing: 20px;
+    transform: translateY(25vh);
+    color: white;
+    z-index: 3;
+}
+
+.solid {
+    transform: translateY(25vh);
+    border-top: 2px solid #ffff;
+    max-width: 50vw;
+    z-index: 3;
+}
+
+.contact-text p {
+    transform: translateY(50vh);
+    font-size: 1.2rem;
+    max-width: 50vw;
+    color: white;
+    z-index: 3;
+}
+
+.contact-text a{
+    transform: translateY(50vh);
+    font-size: 1.2rem;
+    max-width: 50vw;
+    color: white;
+    z-index: 3;
+}
+
+.rectangle2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color:  black;
+    z-index: -1;
+    opacity: 0.5;
+    transform: translateX(-2%);
+}
+
+.instagram {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transition: 0.3s;
+}
+
+.instagram:hover {
+    transform: scale(1.25);
+}
+
+#footer {
+    width: 100%;
+    height: 25vh;
+    background-color: black;
+}
+
+#footer p {
+    position: absolute;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    left: 50vw;
+    transform: translate(-50%, 600%)
+}
+
+[data-scroll] {
+  transition: all 1s;
+}
+[data-scroll="in"] {
+  clip-path: inset(0 0 0 0);
+    opacity: 1;
+}
+[data-scroll="out"] {
+ clip-path: inset(0 0 100% 0);
+    opacity: 0;
+}
+
+@keyframes anim {
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+    
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
